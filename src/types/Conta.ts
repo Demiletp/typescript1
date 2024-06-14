@@ -9,5 +9,12 @@ export class Conta{
         }
         return value;
     }) || [];
-    
+    constructor (nome: string){
+        this.nome = nome;
+    }
 }
+
+
+const conta = new Conta("Joana da Silva Oliveira");
+
+export default conta; 
