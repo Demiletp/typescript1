@@ -83,5 +83,5 @@ export class Conta{
 
 
 const conta = new Conta("Joana da Silva Oliveira");
-console.log(conta.getTitular())
+
 export default conta; 
