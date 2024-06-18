@@ -1,11 +1,11 @@
 export class Armazenador{
     private constructor() {}
     
-    salvar(chave: string, valor: any): void {
+     static salvar(chave: string, valor: any): void {
         const valorComoString = JSON.stringify(valor);
         localStorage.setItem(chave, valorComoString);
     }
-    obter(chave: string, reviver?:(this: any, key: string, value: any)=> any){
+    static obter(chave: string, reviver?:(this: any, key: string, value: any)=> any){
         const  valor = localStorage.getItem(chave);
         if  ( valor ===null ){
             return null 
@@ -13,5 +13,6 @@ export class Armazenador{
         if (reviver){
             return JSON.parse(valor,reviver)
         }
+        return JSON.parse(valor)
     }
 }
